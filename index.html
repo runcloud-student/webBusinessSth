@@ -86,6 +86,40 @@
       </div>
     </div>
 
+    <div id="searchResultModal" class="modal fade" role="dialog">
+      <div class="modal-dialog model-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Search Results</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="table-responsive">
+              <table id="searchResultsTable" class="table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>x</td>
+                    <td>y</td>
+                    <td>z</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button type="button" class="btn btn-primary btn-sm ml-auto" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="site-blocks-cover" data-aos="fade">
       <div class="container">
         <div class="row">
@@ -421,7 +455,63 @@
       });
     })
   </script>
+  <script>
+    $(document).ready(function () {
 
+      function alignModal() {
+        var modalDialog = $(this).find(".modal-dialog");
+        /* Applying the top margin on modal dialog to align it vertically center */
+        modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2));
+      }
+      // Align modal when it is displayed
+      $(".modal").on("shown.bs.modal", alignModal);
+
+      // Align modal when user resize the window
+      $(window).on("resize", function () {
+        $(".modal:visible").each(alignModal);
+      });
+
+      $("#searchForm").submit(function (e) {
+        e.preventDefault();
+
+        var row = "";
+        $("#searchResultsTable > tbody tr").remove();
+        var searchText = $("#searchTextBox").val();
+        var categorySearchResult = search(products, "Category", searchText);
+        $.each(categorySearchResult, function (i, v) {
+          row += "<tr><td>";
+          row += v.Name;
+          row += "</td><td>";
+          row += v.Price;
+          row += "</td><td>";
+          row += "<img src=\"images/";
+          row += v.Image;
+          row += "\" alt=\"";
+          row += v.Images;
+          row += "\" width=\"40\" height=\"40\"";
+          row += "</td></tr>";
+        });
+
+        var nameSearchResult = search(products, "Name", searchText);
+        $.each(nameSearchResult, function (i, v) {
+          row += "<tr><td>";
+          row += v.Name;
+          row += "</td><td>";
+          row += v.Price;
+          row += "</td><td>";
+          row += "<img src=\"images/";
+          row += v.Image;
+          row += "\" alt=\"";
+          row += v.Images;
+          row += "\" width=\"40\" height=\"40\"";
+          row += "</td></tr>";
+        });
+        $("#searchResultModal").modal("show");
+
+        $("#searchResultsTable > tbody").append(row);
+      })
+    })
+  </script>
 </body>
 
 </html>
