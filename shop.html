@@ -378,9 +378,11 @@
         var newA2 = $("<a>");
         newA2.attr("href", "#");
         newA2.text(v["Name"]);
-
+        var newButton = $("<button>");
+        newButton.addClass("btn btn-primary ml-2");
+        newButton.text("Add to Cart");
         newH2.append(newA2);
-
+        newH2.append(newButton);
         var newStrong = $("<strong>");
         newStrong.addClass("item-price");
         newStrong.text(v["Price"]);
@@ -392,8 +394,36 @@
         $shopAll.append(newDiv);
 
       });
-
+      $("div#shopAll").children().children("h2").children("button").on("click", function (e) {
+        e.preventDefault();
+        var productName = e.target.previousSibling.text;
+        addToCart(productName);
+      });
     });
+
+    function addToCart(name){
+      var items = new Array();
+      var qty = 1;
+      var productSearchResult = search(products, "Name", name);
+      var price = productSearchResult[0].Price;
+      var image = productSearchResult[0].Image;
+
+      if (typeof (Storage) !== "undefined") {
+        if (localStorage.getItem("Items") != null) {
+          items = JSON.parse(localStorage.getItem("Items"));
+          var index = items.findIndex(x => x.name === name);
+          if (index != -1) {
+            quantity = items.find(x => x.name === name).quantity;
+            items.splice(index, 1);
+            qty += quantity;
+          }
+        }
+        var item = { "name": name, "image": image, "price": price, "quantity": qty };
+        items.push(item);
+        alert(`${item.name} added to cart.`);
+        localStorage.setItem("Items", JSON.stringify(items));
+      }
+    }
   </script>
 </body>
 
