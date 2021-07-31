@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>ShopMax &mdash; Colorlib e-Commerce Template</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
+<head>
+  <title>ShopMax &mdash; Colorlib e-Commerce Template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
 
-    <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/aos.css">
 
-    <link rel="stylesheet" href="css/style.css">
-    
-  </head>
-  <body>
-  
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
   <div class="site-wrap">
-    
+
 
     <div class="site-navbar bg-white py-2">
 
@@ -32,7 +34,7 @@
           <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
           <form action="#" method="post">
             <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
-          </form>  
+          </form>
         </div>
       </div>
 
@@ -62,7 +64,7 @@
                     </li>
                   </ul>
                 </li>
-                
+
                 <li class="active"><a href="shop.html">Shop</a></li>
                 <li><a href="#">Catalogue</a></li>
                 <li><a href="#">New Arrivals</a></li>
@@ -77,16 +79,18 @@
               <span class="icon-shopping-bag"></span>
               <span class="number">2</span>
             </a>
-            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
+                class="icon-menu"></span></a>
           </div>
         </div>
       </div>
     </div>
-    
+
     <div class="bg-light py-3">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Cart</strong></div>
+          <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong
+              class="text-black">Cart</strong></div>
         </div>
       </div>
     </div>
@@ -107,54 +111,8 @@
                     <th class="product-remove">Remove</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td class="product-thumbnail">
-                      <img src="images/cloth_1.jpg" alt="Image" class="img-fluid">
-                    </td>
-                    <td class="product-name">
-                      <h2 class="h5 text-black">Top Up T-Shirt</h2>
-                    </td>
-                    <td>$49.00</td>
-                    <td>
-                      <div class="input-group mb-3" style="max-width: 120px;">
-                        <div class="input-group-prepend">
-                          <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
-                        </div>
-                        <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                        <div class="input-group-append">
-                          <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
-                        </div>
-                      </div>
+                <tbody id="productRows">
 
-                    </td>
-                    <td>$49.00</td>
-                    <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
-                  </tr>
-
-                  <tr>
-                    <td class="product-thumbnail">
-                      <img src="images/cloth_2.jpg" alt="Image" class="img-fluid">
-                    </td>
-                    <td class="product-name">
-                      <h2 class="h5 text-black">Polo Shirt</h2>
-                    </td>
-                    <td>$49.00</td>
-                    <td>
-                      <div class="input-group mb-3" style="max-width: 120px;">
-                        <div class="input-group-prepend">
-                          <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
-                        </div>
-                        <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                        <div class="input-group-append">
-                          <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
-                        </div>
-                      </div>
-
-                    </td>
-                    <td>$49.00</td>
-                    <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -211,7 +169,8 @@
 
                 <div class="row">
                   <div class="col-md-12">
-                    <button class="btn btn-primary btn-lg btn-block" onclick="window.location='checkout.html'">Proceed To Checkout</button>
+                    <button class="btn btn-primary btn-lg btn-block" onclick="window.location='checkout.html'">Proceed
+                      To Checkout</button>
                   </div>
                 </div>
               </div>
@@ -229,7 +188,7 @@
             <a href="#" class="block-6">
               <img src="images/about_1.jpg" alt="Image placeholder" class="img-fluid rounded mb-4">
               <h3 class="font-weight-light  mb-0">Finding Your Perfect Shirts This Summer</h3>
-              <p>Promo from  July 15 &mdash; 25, 2019</p>
+              <p>Promo from July 15 &mdash; 25, 2019</p>
             </a>
           </div>
           <div class="col-lg-5 ml-auto mb-5 mb-lg-0">
@@ -261,7 +220,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="col-md-6 col-lg-3">
             <div class="block-5 mb-5">
               <h3 class="footer-heading mb-4">Contact Info</h3>
@@ -286,12 +245,15 @@
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
             <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;
+              <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made
+              with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"
+                class="text-primary">Colorlib</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
-          
+
         </div>
       </div>
     </footer>
@@ -306,6 +268,123 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
-    
-  </body>
+  <script src="js/eBusiness.js"></script>
+
+  <script>
+
+    $(document).ready(function () {
+
+      var items;
+      var name;
+      var image;
+      var price;
+      var subtotal = 0;
+      var total = 0;
+
+      if (typeof (Storage) !== "undefined") {
+        if (localStorage.getItem("Items") != null) {
+          items = JSON.parse(localStorage.getItem("Items"));
+        }
+      }
+
+      var $productRows = $("#productRows");
+
+      $.each(items, function (i, v) {
+
+        var newTr = $("<tr>");
+
+        var newTd1 = $("<td>");
+        newTd1.addClass("product-thumbnail");
+        var newImg = $("<img>");
+        newImg.attr("src", "images/" + v.image);
+        newImg.attr("alt", "Image");
+        newImg.addClass("img-fluid");
+
+        newTd1.append(newImg);
+
+        var newTd2 = $("<td>");
+        newTd1.addClass("product-name");
+        var newH2 = $("<h2>");
+        newH2.addClass("h5 text-black");
+        newH2.text(v.name);
+
+        newTd2.append(newH2);
+
+        var newTd3 = $("<td>");
+        newTd3.text(v.price);
+
+        var newTd4 = $("<td>");
+        var newDiv1 = $("<div>");
+        newDiv1.addClass("input-group mb-3");
+        newDiv1.css("max-width", "120px");
+
+        newTd4.append(newDiv1);
+
+        var newDiv2 = $("<div>");
+        newDiv2.addClass("input-group-prepend");
+
+        var newButton1 = $("<button>");
+        newButton1.addClass("btn btn-outline-primary js-btn-minus");
+        newButton1.attr("type", "button");
+        newButton1.html("&minus;");
+
+        newDiv2.append(newButton1);
+
+        var newInput = $("<input>");
+        newInput.attr("type", "text");
+        newInput.addClass("form-control text-center");
+        newInput.attr("value", v.quantity);
+        newInput.attr("placeholder", "");
+        newInput.attr("aria-label", "Example text with button addon");
+        newInput.attr("aria-describedby", "button-addon1");
+
+        var newDiv3 = $("<div>");
+        newDiv3.addClass("input-group-prepend");
+
+        var newButton2 = $("<button>");
+        newButton2.addClass("btn btn-outline-primary js-btn-minus");
+        newButton2.attr("type", "button");
+        newButton2.html("&plus;");
+
+        newDiv3.append(newButton2);
+
+        newDiv1.append(newDiv2);
+        newDiv1.append(newInput);
+        newDiv1.append(newDiv3);
+
+        var newTd5 = $("<td>");
+        var productTotal = parseInt(v.quantity) * parseFloat(v.price.substring(1));
+        newTd5.text(productTotal);
+
+        var newTd6 = $("<td>");
+        var newA = $("<a>");
+        newA.attr("href", "#");
+        newA.addClass("btn btn-primary height-auto btn-sm");
+        newA.text("X");
+
+        newTd6.append(newA);
+
+        newTr.append(newTd1);
+        newTr.append(newTd2);
+        newTr.append(newTd3);
+        newTr.append(newTd4);
+        newTr.append(newTd5);
+        newTr.append(newTd6);
+
+        $productRows.append(newTr);
+
+        subtotal += productTotal;
+
+      });
+      $("#subtotal").children().text("$" + subtotal);
+
+      total = subtotal;
+
+      $("#total").children().text("$" + total);
+    });
+
+  </script>
+
+</body>
+
 </html>
